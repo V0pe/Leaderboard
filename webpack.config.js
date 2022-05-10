@@ -10,7 +10,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-        template: './src/index.html',
+      template: './src/index.html',
     }),
   ],
   output: {
@@ -19,7 +19,7 @@ module.exports = {
     clean: true,
   },
   performance: {
-    hints: false
+    hints: false,
   },
   module: {
     rules: [
