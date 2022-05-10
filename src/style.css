@@ -1,86 +1,85 @@
 * {
-    padding: 0;
-    margin:0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-   padding-top: 5rem;
-   display: flex;
-   align-items: center;
-   flex-direction: column;
-   font-size: 1.3rem;
+  padding-top: 5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.3rem;
 }
 
 .container {
-    gap:6rem;
-    width: 80%;
+  gap: 6rem;
+  width: 80%;
 }
 
 header {
-    text-align: center;
-    margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .scores {
-    width: 50%;
+  width: 50%;
 }
 
 .scores-header {
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
 
 .scores-header a {
-    text-decoration: none;
-    color: black;
-    border: 2px solid black;
-    padding: 0.3rem 1rem;
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  padding: 0.3rem 1rem;
 }
 
 form {
   margin-top: 1rem;
-  gap:2rem;
+  gap: 2rem;
   align-items: flex-end;
 }
 
 form input {
-    line-height: 2.5rem;
-    border: 2px solid black;
-    width: 100%;
+  line-height: 2.5rem;
+  border: 2px solid black;
+  width: 100%;
 }
 
 form input::placeholder {
-    padding-left: 1rem;
-    font-style: italic;
+  padding-left: 1rem;
+  font-style: italic;
 }
 
 form button {
-    width: 40%;
-    position: relative;
-    padding: 0.3rem 0.5rem;
+  width: 40%;
+  position: relative;
+  padding: 0.3rem 0.5rem;
 }
 
 ul {
-    list-style: none;
-    border: 2px solid black;
-    margin-top: 1rem;
+  list-style: none;
+  border: 2px solid black;
+  margin-top: 1rem;
 }
 
 li {
-   padding:1rem;
+  padding: 1rem;
 }
 
 li:nth-child(odd) {
-    background-color: #d3d3d3;
-  }
+  background-color: #d3d3d3;
+}
 
 .d-flex {
-    display: flex;
+  display: flex;
 }
 
 .col {
-    flex-direction: column;
+  flex-direction: column;
 }
-
