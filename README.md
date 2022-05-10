@@ -1,4 +1,4 @@
-## To-Do List
+## Leaderboard
 This project delineates the process of displaying scores submitted by different players, using callbacks and promise. It also allows individuals to submit their score. All data is preserved using external Leaderboard API service. 
 
 ### AIM
