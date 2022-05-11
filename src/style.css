@@ -86,10 +86,10 @@ li:nth-child(odd) {
 }
 
 #error-state {
-  color:rgb(91, 50, 50);
+  color: rgb(91, 50, 50);
 }
 
 #get-score:hover,
 form button:hover {
-    background-color: #d3d3d3;
+  background-color: #d3d3d3;
 }
