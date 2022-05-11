@@ -32,11 +32,11 @@ header {
   align-items: center;
 }
 
-.scores-header a {
-  text-decoration: none;
+#get-score {
   color: black;
   border: 2px solid black;
   padding: 0.3rem 1rem;
+  cursor: pointer;
 }
 
 form {
@@ -60,6 +60,7 @@ form button {
   width: 40%;
   position: relative;
   padding: 0.3rem 0.5rem;
+  cursor: pointer;
 }
 
 ul {
@@ -82,4 +83,13 @@ li:nth-child(odd) {
 
 .col {
   flex-direction: column;
+}
+
+#error-state {
+  color: rgb(91, 50, 50);
+}
+
+#get-score:hover,
+form button:hover {
+  background-color: #d3d3d3;
 }
