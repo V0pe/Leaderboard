@@ -18,6 +18,17 @@ body {
   width: 80%;
 }
 
+#slide {
+  position: relative;
+  font-size: 5rem;
+  animation: fall-in 2s;
+}
+
+@keyframes fall-in{
+  from {top: -6rem;}
+  to {top: 0;}
+}
+
 header {
   text-align: center;
   margin-bottom: 2rem;
