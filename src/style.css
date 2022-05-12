@@ -10,11 +10,23 @@ body {
   align-items: center;
   flex-direction: column;
   font-size: 1.3rem;
+  background-color: antiquewhite;
 }
 
 .container {
   gap: 6rem;
   width: 80%;
+}
+
+#slide {
+  position: relative;
+  font-size: 5rem;
+  animation: fall-in 2s;
+}
+
+@keyframes fall-in {
+  from { top: -6rem; }
+  to { top: 0; }
 }
 
 header {
@@ -32,11 +44,16 @@ header {
   align-items: center;
 }
 
-#get-score {
-  color: black;
+#get-score,
+#add {
+  color: white;
   border: 2px solid black;
+  background-color: black;
   padding: 0.3rem 1rem;
   cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 2px rgb(0, 0, 0);
+  transition: all ease-out 0.5s;
 }
 
 form {
@@ -73,6 +90,10 @@ li {
   padding: 1rem;
 }
 
+footer {
+  margin: 2rem 0;
+}
+
 li:nth-child(odd) {
   background-color: #d3d3d3;
 }
@@ -87,9 +108,28 @@ li:nth-child(odd) {
 
 #error-state {
   color: rgb(91, 50, 50);
+  font-size: 1rem;
 }
 
 #get-score:hover,
-form button:hover {
+#add:hover {
   background-color: #d3d3d3;
+  color: black;
+}
+
+#get-score:active,
+#add:active {
+  transform: scale(0.8);
+  background-color: rgb(148, 112, 65);
+}
+
+@media (max-width: 699px) {
+  .container {
+    flex-direction: column;
+    padding-bottom: 5rem;
+  }
+
+  .scores {
+    width: 100%;
+  }
 }

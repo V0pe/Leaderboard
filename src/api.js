@@ -1,6 +1,6 @@
 const gameID = 'wegop0c4dTHkWvN72V4E';
 
-const createScore = (userName, userScore) => fetch(
+const createScore = (username, userscore) => fetch(
   `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores`,
   {
     method: 'POST',
@@ -8,8 +8,8 @@ const createScore = (userName, userScore) => fetch(
       'Content-type': 'application/json; charset=UTF-8',
     },
     body: JSON.stringify({
-      user: userName,
-      score: userScore,
+      user: username,
+      score: userscore,
     }),
   },
 ).then((res) => res.json());
