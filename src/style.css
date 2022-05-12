@@ -109,7 +109,7 @@ li:nth-child(odd) {
 #get-score:active,
 #add:active {
   transform: scale(0.8);
-  background-color: red;
+  background-color: rgb(148, 112, 65);
 }
 
 @media (max-width:699px){
