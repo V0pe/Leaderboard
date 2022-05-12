@@ -4,6 +4,9 @@ This project delineates the process of displaying scores submitted by different 
 ### AIM
 The goal is build an apllication that uses plain javascript for interactive Leaderboard score update. 
 
+### LIve
+View the live application [here](https://v0pe.github.io/Leaderboard/)
+
 ### Features 
 - [ ] Interactive HTML page
 
