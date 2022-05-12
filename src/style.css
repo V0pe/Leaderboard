@@ -24,9 +24,9 @@ body {
   animation: fall-in 2s;
 }
 
-@keyframes fall-in{
-  from {top: -6rem;}
-  to {top: 0;}
+@keyframes fall-in {
+  from { top: -6rem; }
+  to { top: 0; }
 }
 
 header {
