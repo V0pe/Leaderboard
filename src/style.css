@@ -111,6 +111,15 @@ li:nth-child(odd) {
   font-size: 1rem;
 }
 
+.stat-container {
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.stat-chi {
+  margin-top: 1rem;
+}
+
 #get-score:hover,
 #add:hover {
   background-color: #d3d3d3;
