@@ -5,7 +5,7 @@
 }
 
 body {
-  padding-top: 5rem;
+  padding-top: 3rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -111,8 +111,8 @@ li:nth-child(odd) {
   font-size: 1rem;
 }
 
-.stat-container {
-  justify-content: center;
+.key-metrics {
+  align-items: center;
   margin-top: 2rem;
 }
 
