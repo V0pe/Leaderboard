@@ -9,6 +9,7 @@ View the live application [here](https://v0pe.github.io/Leaderboard/)
 
 ### Features 
 - [ ] Interactive HTML page
+- [ ] Players stat display. 
 
 ### Built With
 - Lighthouse (An open-source, automated tool for improving the quality of web pages. It has audits for performance, accessibility, progressive web apps, SEO and more).
