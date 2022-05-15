@@ -120,6 +120,25 @@ li:nth-child(odd) {
   margin-top: 1rem;
 }
 
+.stat {
+  text-align: center;
+}
+
+#highest-score {
+  color:green;
+}
+
+#lowest-score {
+  color: red;
+}
+
+#Score-Average {
+   color:orange;
+}
+
+#Mode {
+  color:blue;
+}
 
 #get-score:hover,
 #add:hover {
