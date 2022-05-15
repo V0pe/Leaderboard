@@ -120,6 +120,7 @@ li:nth-child(odd) {
   margin-top: 1rem;
 }
 
+
 #get-score:hover,
 #add:hover {
   background-color: #d3d3d3;
