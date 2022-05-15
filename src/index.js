@@ -1,10 +1,7 @@
 import './style.css';
 import leaderboard from './api.js';
 import getStat from './stat.js';
-import '@fortawesome/fontawesome-free/js/fontawesome';
-import '@fortawesome/fontawesome-free/js/solid';
-import '@fortawesome/fontawesome-free/js/regular';
-import '@fortawesome/fontawesome-free/js/brands';
+import '@fortawesome/fontawesome-free/js/all.js';
 
 const scoreName = document.getElementById('Name');
 const scoreValue = document.getElementById('score');
@@ -87,12 +84,27 @@ scoreAdd.addEventListener('click', async (e) => {
     }, 3000);
   }
 });
-
+console.log(key[0].textContent)
 key.forEach((ke) => {
     const div = document.createElement('div');
-    div.innerHTML = `<i class="fa fa-star-o">`;
     ke.appendChild(div);
-    ke.classList.add('d-flex')
+    ke.classList.add('d-flex');
+    switch (ke.textContent) {
+        case 'Highest Score':
+            div.innerHTML = `<i class="fa-regular fa-circle-check" style="color:green"></i>`; 
+        break;
+        case 'Mode Score':
+            div.innerHTML = `<i class="fa-solid fa-bolt" style="color:blue"></i>`; 
+        break;
+        case 'Lowest Score':
+            div.innerHTML = `<i class="fa-solid fa-triangle-exclamation" style="color:red"></i>`; 
+        break;
+        case 'Average Score':
+            div.innerHTML = `<i class="fa-regular fa-bell" style="color:orange"></i>`; 
+        break;
+        default:
+            div.innerHTML = `<i class="fa-regular fa-bell"></i>`; 
+    }
 });
 
 

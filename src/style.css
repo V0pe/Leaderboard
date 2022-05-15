@@ -124,6 +124,10 @@ li:nth-child(odd) {
   text-align: center;
 }
 
+.key {
+  gap:1rem;
+}
+
 #highest-score {
   color:green;
 }
