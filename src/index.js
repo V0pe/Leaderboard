@@ -1,6 +1,6 @@
 import './style.css';
 import leaderboard from './api.js';
-import getStat from './stat.js';
+import {getStat} from './stat.js';
 import '@fortawesome/fontawesome-free/js/all.js';
 
 const scoreName = document.getElementById('Name');
@@ -10,10 +10,6 @@ const scoreAdd = document.getElementById('add');
 const callStatus = document.querySelector('#error-state');
 const scoreContainer = document.querySelector('.score-bo');
 const key = document.querySelectorAll('.key');
-let highest = document.getElementById('highest-score');
-let lowest = document.getElementById('lowest-score');
-let avg = document.getElementById('Score-Average');
-let mode = document.getElementById('Mode');
 
 reFreshBtn.addEventListener('click', async () => {
   const scores = await leaderboard.getScores();
@@ -25,42 +21,6 @@ reFreshBtn.addEventListener('click', async () => {
     scoreArray.push(e.score);
     
   });
-  scoreArray = scoreArray.map((sco) => Number(sco));
-  console.log(scoreArray);
-  function mod (a) {
-    a = a.sort((x, y) => x - y);
-  
-    var bestStreak = 1;
-    var bestElem = a[0];
-    var currentStreak = 1;
-    var currentElem = a[0];
-  
-    for (let i = 1; i < a.length; i++) {
-      if (a[i-1] !== a[i]) {
-        if (currentStreak > bestStreak) {
-          bestStreak = currentStreak;
-          bestElem = currentElem;
-        }
-  
-        currentStreak = 0;
-        currentElem = a[i];
-      }
-  
-      currentStreak++;
-    }  
-    return currentStreak > bestStreak ? currentElem : bestElem;
-  };
-
-let getStat = (scoreArray) => {
-    let max = Math.max(...scoreArray);
-    let min = Math.min(...scoreArray);
-    let average = ((scoreArray.reduce((prev,next) => prev + next,0))/scoreArray.length).toFixed(2);
-    let modal = mod(scoreArray);
-    highest.innerHTML = `${max}`;
-    mode.innerHTML = `${modal}`;
-    lowest.innerHTML = `${min}`;
-    avg.innerHTML = `${average}`;
-}
   getStat(scoreArray);
 });
 

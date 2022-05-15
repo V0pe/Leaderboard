@@ -3,8 +3,8 @@ let lowest = document.getElementById('lowest-score');
 let avg = document.getElementById('Score-Average');
 let mode = document.getElementById('Mode');
 
-var mod = a => {
-    a = a.slice().sort((x, y) => x - y);
+function mod (a) {
+    a = a.sort((x, y) => x - y);
   
     var bestStreak = 1;
     var bestElem = a[0];
@@ -23,18 +23,19 @@ var mod = a => {
       }
   
       currentStreak++;
-    }
-  
+    }  
     return currentStreak > bestStreak ? currentElem : bestElem;
   };
 
 let getStat = (scoreArray) => {
+    scoreArray = scoreArray.map((sco) => Number(sco));
     let max = Math.max(...scoreArray);
     let min = Math.min(...scoreArray);
-    let average = (scoreArray.reduce((prev,next) => prev + next,0))/scoreArray.length;
-    let modal = mod(...scoreArray);
+    let average = ((scoreArray.reduce((prev,next) => prev + next,0))/scoreArray.length).toFixed(2);
+    let modal = mod(scoreArray);
     highest.innerHTML = `${max}`;
     mode.innerHTML = `${modal}`;
+    lowest.innerHTML = `${min}`;
+    avg.innerHTML = `${average}`;
 }
-
-export default { getStat };
+export { getStat };
