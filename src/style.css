@@ -125,11 +125,11 @@ li:nth-child(odd) {
 }
 
 .key {
-  gap:1rem;
+  gap: 1rem;
 }
 
 #highest-score {
-  color:green;
+  color: green;
 }
 
 #lowest-score {
@@ -137,11 +137,11 @@ li:nth-child(odd) {
 }
 
 #Score-Average {
-   color:orange;
+  color: orange;
 }
 
 #Mode {
-  color:blue;
+  color: blue;
 }
 
 #get-score:hover,

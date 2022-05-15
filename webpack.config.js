@@ -17,7 +17,7 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    publicPath: "/Leaderboard/",
+    publicPath: '/Leaderboard/',
   },
   performance: {
     hints: false,
