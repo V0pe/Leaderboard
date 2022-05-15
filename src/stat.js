@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 const highest = document.getElementById('highest-score');
 const lowest = document.getElementById('lowest-score');
 const avg = document.getElementById('Score-Average');
