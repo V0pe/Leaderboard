@@ -1,4 +1,5 @@
 /* eslint-disable no-plusplus */
+/* eslint-disable import/prefer-default-export */
 const highest = document.getElementById('highest-score');
 const lowest = document.getElementById('lowest-score');
 const avg = document.getElementById('Score-Average');
@@ -32,7 +33,8 @@ const getStat = (scoreArray) => {
   scoreArray = scoreArray.map((sco) => Number(sco));
   const max = Math.max(...scoreArray);
   const min = Math.min(...scoreArray);
-  const average = ((scoreArray.reduce((prev, next) => prev + next, 0)) / scoreArray.length).toFixed(2);
+  const average = ((scoreArray.reduce((prev, next) => prev + next, 0))
+ / scoreArray.length).toFixed(2);
   const modal = mod(scoreArray);
   highest.innerHTML = `${max}`;
   mode.innerHTML = `${modal}`;
