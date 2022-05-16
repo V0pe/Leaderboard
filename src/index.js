@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
+
 import './style.css';
 import leaderboard from './api.js';
 import { getStat } from './stat.js';
