@@ -1,5 +1,9 @@
+/* eslint-disable import/no-extraneous-dependencies */
+
 import './style.css';
 import leaderboard from './api.js';
+import { getStat } from './stat.js';
+import '@fortawesome/fontawesome-free/js/all.js';
 
 const scoreName = document.getElementById('Name');
 const scoreValue = document.getElementById('score');
@@ -7,14 +11,18 @@ const reFreshBtn = document.getElementById('get-score');
 const scoreAdd = document.getElementById('add');
 const callStatus = document.querySelector('#error-state');
 const scoreContainer = document.querySelector('.score-bo');
+const key = document.querySelectorAll('.key');
 
 reFreshBtn.addEventListener('click', async () => {
   const scores = await leaderboard.getScores();
   const res = scores.result;
   scoreContainer.innerHTML = '';
+  const scoreArray = [];
   res.forEach((e) => {
     scoreContainer.insertAdjacentHTML('beforeend', `<li>${e.user}: ${e.score}</li>`);
+    scoreArray.push(e.score);
   });
+  getStat(scoreArray);
 });
 
 scoreAdd.addEventListener('click', async (e) => {
@@ -35,5 +43,26 @@ scoreAdd.addEventListener('click', async (e) => {
     setTimeout(() => {
       callStatus.innerHTML = '';
     }, 3000);
+  }
+});
+key.forEach((ke) => {
+  const div = document.createElement('div');
+  ke.appendChild(div);
+  ke.classList.add('d-flex');
+  switch (ke.textContent) {
+    case 'Highest Score':
+      div.innerHTML = '<i class="fa-regular fa-circle-check" style="color:green"></i>';
+      break;
+    case 'Mode Score':
+      div.innerHTML = '<i class="fa-solid fa-bolt" style="color:blue"></i>';
+      break;
+    case 'Lowest Score':
+      div.innerHTML = '<i class="fa-solid fa-triangle-exclamation" style="color:red"></i>';
+      break;
+    case 'Average Score':
+      div.innerHTML = '<i class="fa-regular fa-bell" style="color:orange"></i>';
+      break;
+    default:
+      div.innerHTML = '<i class="fa-regular fa-bell"></i>';
   }
 });

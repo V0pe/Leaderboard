@@ -17,6 +17,7 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+    publicPath: '/Leaderboard/',
   },
   performance: {
     hints: false,
@@ -26,6 +27,13 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(svg|eot|woff|woff2|ttf)$/,
+        loader: 'file-loader',
+        options: {
+          outputpath: 'fonts',
+        },
       },
     ],
   },
